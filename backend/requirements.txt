@@ -1,24 +1,9 @@
-# FastAPI and Server
-fastapi==0.104.1
-uvicorn==0.24.0
-python-multipart==0.0.6
-
-# HTTP Client
-httpx==0.25.1
-
-# Environment Variables
-python-dotenv==1.0.0
-
-# Document Processing (FAST libraries)
-PyPDF2==3.0.1          # Fast PDF text extraction
-python-docx==1.1.0     # DOCX file processing
-
-# CORS
-python-cors==1.0.0
-
-# Optional: Advanced PDF processing (if PyPDF2 has issues)
-# pdfplumber==0.10.3   # Alternative PDF library (more accurate but slower)
-
-# Optional: OCR support for scanned PDFs (only if needed)
-# pytesseract==0.3.10
-# pdf2image==1.16.3
+fastapi
+uvicorn
+python-dotenv
+httpx
+deepgram-sdk
+python-multipart
+PyPDF2
+python-docx
+groq
