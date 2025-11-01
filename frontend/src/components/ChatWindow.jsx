@@ -44,7 +44,7 @@ const ChatWindow = () => {
         session_id: sessionId
       };
 
-      const response = await fetch('http://localhost:8000/api/chat', {
+      const response = await fetch('/api/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -201,7 +201,7 @@ const ChatWindow = () => {
     setActiveTab('chat');
     
     try {
-      await fetch(`http://localhost:8000/api/document/clear?session_id=${sessionId}`, {
+      await fetch(`/api/document/clear?session_id=${sessionId}`, {
         method: 'POST'
       });
     } catch (error) {
@@ -219,7 +219,7 @@ const ChatWindow = () => {
   useEffect(() => {
     const checkStatus = async () => {
       try {
-        const response = await fetch(`http://localhost:8000/api/document/status?session_id=${sessionId}`);
+        const response = await fetch(`/api/document/status?session_id=${sessionId}`);
         const data = await response.json();
         if (data.has_document) {
           setUploadedDocument({ name: "Loaded document" });

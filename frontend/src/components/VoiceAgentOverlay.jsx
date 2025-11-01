@@ -59,7 +59,7 @@ export const VoiceAgentOverlay = ({ onClose }) => {
 
     try {
       console.log('📤 Sending audio to backend...');
-      const response = await fetch('http://localhost:8000/api/voice', {
+      const response = await fetch('/api/voice', {
         method: 'POST',
         body: formData,
       });
